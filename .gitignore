@@ -1,0 +1,6 @@
+**/Debug
+**/obj
+**/.vs
+*.exe
+*.obj
+**/*.suo
