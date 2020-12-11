@@ -11,22 +11,30 @@ class Solution:
         # reset found map and continue searching
 
         longest = 0
-        len_count = 0
-        found_chars = {}
-        for i in range(0,len(s)):
-            c = s[i]
-            if c in found_chars:
-                if len_count > longest:
-                    longest = len_count
-                # let's reset
-                len_count = 0
-                found_chars = {}
+        max = len(s)
 
-            len_count += 1
-            found_chars[c] = 1
+        for start in range(0, max):
+            found_chars = {}
+            length = 0
 
-        if len_count > longest:
-            longest = len_count
+            for idx in range(start, max):
+                c = s[idx]
+
+                # abcdab
+                # start = a
+                # idx = b
+
+                # we should always update length count
+                length += 1
+
+                # if new char, store it
+                # if seen before, we break out now
+                if c not in found_chars:
+                    found_chars[c] = 1
+                    if length > longest:
+                        longest = length
+                else:
+                    break
 
         return longest
 
