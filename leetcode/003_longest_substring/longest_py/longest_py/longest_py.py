@@ -3,6 +3,31 @@ import unittest
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        # on every iteration, we keep track of the current substring
+        # that is our longest string
+        # when we reach the second a, we start new string
+        # from b, making new string bcda
+        #
+
+        longest = 0
+        cur_str = ''
+
+        for idx in range(0,len(s)):
+            c = s[idx]
+            if c in cur_str:
+                # if find character exists already
+                # we make our str shift over by 1 char
+                tidx = cur_str.index(c)
+                cur_str = cur_str[tidx+1:]                
+
+            cur_str += c
+            longest = max(longest, len(cur_str))
+
+        return longest
+
+
+
+    def lengthOfLongestSubstringOld(self, s: str) -> int:
 
         # look for string from left to right
         # keep track of all chars found
@@ -43,6 +68,7 @@ class myTest(unittest.TestCase):
 
     def test_findLongest(self):
         s = Solution()     
+        self.assertEqual(2,s.lengthOfLongestSubstring('au'))
         self.assertEqual(3,s.lengthOfLongestSubstring('abcabcbb'))
         self.assertEqual(1,s.lengthOfLongestSubstring('bbbb'))
         self.assertEqual(3,s.lengthOfLongestSubstring('pwwkew'))
