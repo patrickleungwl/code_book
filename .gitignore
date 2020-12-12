@@ -1,6 +1,7 @@
 **/Debug
 **/obj
 **/.vs
+**/env
 *.exe
 *.obj
 **/*.suo
