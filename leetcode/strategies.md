@@ -1,6 +1,19 @@
 ## Strategies
 
 ---
+[Two Sum](https://leetcode.com/problems/two-sum/) (simple)
+
+Given a list of integers- and a target, return the indicies of the two numbers
+that add up to target.
+
+*Instead of 1) brute force making two passes or 2) building a hash map, 
+just build a hash map of each integer location- and while doing that, 
+check back to see if the integer's complement already exists in the cache. 
+If so, return the two integers' location immediately- resulting in a 
+one-pass solution- O(n)- we only look up each list element exactly once.*
+
+---
+
 
 [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
