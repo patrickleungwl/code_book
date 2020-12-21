@@ -1,8 +1,8 @@
-
-import unittest
+#import pytest as py
+#import unittest
 
 class Solution:
-    def isPalin(self, s: str) -> bool:
+    def is_palin(self, s: str) -> bool:
         # bab is a Palin
         # a is a Palin
         # aa is a Palin
@@ -16,8 +16,7 @@ class Solution:
         return result
 
 
-
-    def longestPalindrome(self, s: str) -> str:
+    def longestPalindromeBruteForce(self, s: str) -> str:
         longest = ''
 
         # we keep looking for a reverse- palindome
@@ -28,23 +27,65 @@ class Solution:
         for left_idx in range(0, len(s)+1):
             for right_idx in range(left_idx+1, len(s)+1):
                 test = s[left_idx:right_idx]
-                print('%s' % test)
+                if self.is_palin(test):
+                    if len(test) > len(longest):
+                        longest = test
+
+        return longest
 
 
-        return ''
+    def test_string_slice(self, s: str):
+        s='zabaijk'
+        print(s[0:1])
+        print(s[0:2])
+        print(s[0:3])
+        print(s[1:1+1])
+        print(s[1:2+1])
+        print(s[1:3+1])
+
+        l=len(s)-1
+        print(s[l:l-1:-1])
+        print(s[l:l-2:-1])
+        print(s[l:l-3:-1])
+                
+
+    def palin_middle(self, s: str, i: int) -> str:
+        # sabbak
+        length = 1
+        result = s[i]
+        while True:
+            left = i-length
+            right = i+length
+            if left < 0 or right > len(s):
+                break
+            test = s[left:right]
+            if self.is_palin(test):
+                length+=1
+                result = test
+            else:
+                break
+        return result
 
 
-class mytest(unittest.TestCase):
-    def testPalin(self):
-        s = Solution()
-        self.assertTrue(s.isPalin('bab'))
-        self.assertFalse(s.isPalin('babad'))
+    def longestPalindrome(self, s: str) -> str:
 
-        #self.assertEqual(s.longestPalindrome('babad'),'bab')
-        #self.assertEqual(s.longestPalindrome('cbbd'),'bb')
-        #self.assertEqual(s.longestPalindrome('a'),'a')
-        #self.assertEqual(s.longestPalindrome('ac'),'a')
+        # sabbak
+        # sracecark
+
+        longest = ''
+        slen = len(s)-1
+        # let's step through the string
+        # and look for palindromes
+            
+
+        return longest
 
 
-unittest.main()
 
+def test_palin():
+    s = Solution()
+    assert s.is_palin('bab')
+    assert s.is_palin('babad') == False
+    assert s.palin_middle('sabbak',0) == 's'
+    assert s.palin_middle('sabbak',1) == 'a'
+    assert s.palin_middle('sabbak',2) == 'abba'
