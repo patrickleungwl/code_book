@@ -1,3 +1,8 @@
+## Resources
+
+[Curated Python Algos and Libraries](https://github.com/vinta/awesome-python/blob/master/README.md#algorithms-and-design-patterns)
+
+
 ## Strategies
 
 ---
