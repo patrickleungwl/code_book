@@ -5,7 +5,8 @@
 
 ## Strategies
 
----
+--
+
 [Two Sum](https://leetcode.com/problems/two-sum/) (simple)
 
 Given a list of integers- and a target, return the indicies of the two numbers
@@ -17,8 +18,7 @@ check back to see if the integer's complement already exists in the cache.
 If so, return the two integers' location immediately- resulting in a 
 one-pass solution- O(n)- we only look up each list element exactly once.*
 
----
-
+--
 
 [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
@@ -28,7 +28,7 @@ Write a function to add the two list of digits.
 *Iterate through the digits from each list.  Remember to increment 
 a carry digit.  For each result digit, add a new digit node.*
 
----
+--
 
 [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
@@ -39,7 +39,7 @@ characters.
 If we see a repeat, start over from the first index (place) of the repeated character.
 And record the longest string so far.*
 
----
+--
 
 [Longest Palindrome Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
