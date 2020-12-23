@@ -51,3 +51,13 @@ is a palindrome.  Need to probe for two palindrome conditions- one with even num
 characters (abba) and one with an odd number of characters (racecar).  The probe 
 check functions need to check for string boundaries.*
 
+--
+
+[Reverse Integer](https://leetcode.com/problems/reverse-integer/) (simple)
+
+Given a 32-bit signed integer, reverse digits of an integer. 
+
+*Strip off each digit of the input integer one at a time using the mod % operator by 10
+to get the rightmost digit.  Multiple that digit by 10 and add to resulting number.
+Also remember to check for negative conditions.  And also for boundary max and min integers.
+
