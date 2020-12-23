@@ -59,5 +59,5 @@ Given a 32-bit signed integer, reverse digits of an integer.
 
 *Strip off each digit of the input integer one at a time using the mod % operator by 10
 to get the rightmost digit.  Multiple that digit by 10 and add to resulting number.
-Also remember to check for negative conditions.  And also for boundary max and min integers.
+Also remember to check for negative conditions.  And also for boundary max and min integers.*
 
