@@ -61,3 +61,15 @@ Given a 32-bit signed integer, reverse digits of an integer.
 to get the rightmost digit.  Multiple that digit by 10 and add to resulting number.
 Also remember to check for negative conditions.  And also for boundary max and min integers.*
 
+--
+
+[Palindrome Number](https://leetcode.com/problems/palindrome-number/) (simple)
+
+Determine whether an integer is a palindrome. An integer is a palindrome when it 
+reads the same backward as forward.
+
+*The key insight is to strip the rightmost digit one by one- using the mod % operator by 10
+and putting the digits into a vector.  Then we scan the vector from both left and right
+and compare the digits.  If the digits do not match, then immediately we know the integer 
+is not a palindrome.*
+
