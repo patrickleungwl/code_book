@@ -73,3 +73,14 @@ and putting the digits into a vector.  Then we scan the vector from both left an
 and compare the digits.  If the digits do not match, then immediately we know the integer 
 is not a palindrome.*
 
+--
+
+[Roman To Integer](https://leetcode.com/problems/roman-to-integer) (simple)
+
+Given a roman numeral, convert it to an integer.
+
+*Read the roman numeral from left to right.  Straight forward letter for letter conversion
+to number values- with exceptions needed for I before V and X, X before D and C and so on.
+For the exception cases, must peek ahead forward by 1 char- and if indeed is IV case,
+then I is a -1 instead of a +1 and so on.*
+
